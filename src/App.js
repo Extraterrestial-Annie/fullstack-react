@@ -2,8 +2,6 @@ import './App.css';
 import React from 'react';
 
 
-let parsed = '';
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +65,7 @@ class App extends React.Component {
 
     const listItems2 = songs.map((data) =>
     <li class="pure-menu-item" key={data._id}>
-      <a href="#" onClick={() => this.handleCheck(data._id)} class="pure-menu-link">{songs.length > 1 ? data._id : "show all"}</a>
+      <button onClick={() => this.handleCheck(data._id)} class="pure-menu-link">{songs.length > 1 ? data._id : "show all"}</button>
     </li>
   );
 
@@ -76,7 +74,7 @@ class App extends React.Component {
         <div class="pure-menu pure-menu-horizontal">
           <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-              <a href="#" id="menuLink1" class="pure-menu-link">Select ID</a>
+              <button id="menuLink1" class="pure-menu-link">Select ID</button>
               <ul class="pure-menu-children">
               {listItems2}
               </ul>

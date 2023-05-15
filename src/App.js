@@ -64,24 +64,24 @@ class App extends React.Component {
     );
 
     const listItems2 = songs.map((data) =>
-    <li class="pure-menu-item" key={data._id}>
-      <button onClick={() => this.handleCheck(data._id)} class="pure-menu-link">{songs.length > 1 ? data._id : "show all"}</button>
+    <li className="pure-menu-item" key={data._id}>
+      <button onClick={() => this.handleCheck(data._id)} className="pure-menu-link">{songs.length > 1 ? data._id : "show all"}</button>
     </li>
   );
 
     return (
       <div>
-        <div class="pure-menu pure-menu-horizontal">
-          <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-              <button id="menuLink1" class="pure-menu-link">Select ID</button>
-              <ul class="pure-menu-children">
+        <div className="pure-menu pure-menu-horizontal">
+          <ul className="pure-menu-list">
+            <li className="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+              <button id="menuLink1" className="pure-menu-link">Select ID</button>
+              <ul className="pure-menu-children">
               {listItems2}
               </ul>
             </li>
           </ul>
         </div>
-        <table class='pure-table pure-table-bordered'>
+        <table className='pure-table pure-table-bordered'>
           <thead>
             <tr>
               <th>Song name</th>
